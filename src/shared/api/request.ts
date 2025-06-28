@@ -1,3 +1,4 @@
 export const REQUEST = {
-  JOIN: '/ocr/idcard',
+  JOIN: '/api/ocr/idcard',
+  PHOTO_UPLOAD: '/chat/image',
 };
