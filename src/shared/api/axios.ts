@@ -13,7 +13,7 @@ interface GetRequestParams<TParams> {
 }
 
 const instance = axios.create({
-  baseURL: 'https://usfarmtools.com/api',
+  baseURL: 'https://usfarmtools.com',
 });
 
 export async function get<TResponse, TParams = unknown>(

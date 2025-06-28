@@ -2,7 +2,7 @@ import { useStack } from '@stackflow/react';
 
 import { useFlow } from '@/app/stackflow';
 
-import { DOCK, DOCK_ITEMS } from '@/shared/constants';
+import { DOCK, DOCK_ITEMS, PATH } from '@/shared/constants';
 import type { DockItem, PathItem } from '../types';
 import { cn } from '../utils';
 
@@ -23,9 +23,11 @@ export default function Dock(isLoading: DockProps) {
     .map(i => i.name)
     .pop() as PathItem;
 
+  const render = current === PATH.HOME;
+
   return (
     <>
-      {DOCK_ITEMS.length > 0 && (
+      {render && (
         <div
           className={cn(
             'dock shadow-dock container-mobile border-t-sxl h-dock-height fixed right-0 bottom-0 left-0 z-60 flex items-center justify-between border-[1px] border-none',
