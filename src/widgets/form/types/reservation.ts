@@ -1,10 +1,7 @@
-export type Reservation = {
-  id: number;
+export type PostReservation = {
   tool: string;
   startDate: string;
   endDate: string;
   location: string;
   userName: string;
-  description: string;
-  image: string;
 };

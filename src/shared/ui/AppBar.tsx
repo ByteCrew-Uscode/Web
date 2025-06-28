@@ -37,3 +37,9 @@ export const NormalAppBar = (title: string, bgImage?: string) => ({
   },
   ...baseStyle,
 });
+
+export const CenteredAppBar = (title: string) => ({
+  ...baseStyle,
+  title: title,
+  backgroundColor: '#FFF',
+});

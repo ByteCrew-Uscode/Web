@@ -23,7 +23,10 @@ export default function Dock(isLoading: DockProps) {
     .map(i => i.name)
     .pop() as PathItem;
 
-  const render = current === PATH.HOME;
+  const render =
+    current === PATH.HOME ||
+    current === PATH.RESERVATION ||
+    current === PATH.USER;
 
   return (
     <>

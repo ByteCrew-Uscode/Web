@@ -6,4 +6,6 @@ export const PATH = {
   PHOTO_LOADING: 'PhotoLoadingScreen',
   PHOTO_RESULT: 'PhotoResultScreen',
   FORM: 'FormScreen',
+  RESERVATION: 'ReservationScreen',
+  USER: 'UserScreen',
 } as const;
