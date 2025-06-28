@@ -1,9 +1,17 @@
 import { Button } from '@/shared/ui';
 import FormInput from './FormInput';
+import { useModal } from '@/shared/hooks';
+import { MODAL } from '@/shared/constants';
 
 export default function FormContainer() {
+  const { openModal } = useModal();
+
   const formItems = [
-    { label: '농기계', type: 'search', onClick: () => {} },
+    {
+      label: '농기계',
+      type: 'search',
+      onClick: () => openModal(MODAL.TOOL_PICK),
+    },
     { label: '대여소', type: 'text' },
     { label: '대여일자', type: 'date' },
     { label: '반납일자', type: 'date' },
@@ -37,6 +45,7 @@ export default function FormContainer() {
 const FormItem = ({
   label,
   type,
+  onClick,
 }: {
   label: string;
   type: string;
@@ -46,6 +55,10 @@ const FormItem = ({
     <span className="text-s flex w-full items-center justify-end text-xl">
       {label}
     </span>
-    {type === 'search' ? <FormInput isSearch /> : <FormInput type={type} />}
+    {type === 'search' ? (
+      <FormInput isSearch onClick={onClick} />
+    ) : (
+      <FormInput type={type} />
+    )}
   </div>
 );

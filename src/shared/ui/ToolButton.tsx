@@ -7,6 +7,7 @@ interface ToolButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   toolType: string;
   description: string;
   selected: boolean;
+  quantity?: number;
 }
 
 export default function ToolButton({
@@ -14,12 +15,13 @@ export default function ToolButton({
   toolType,
   description,
   selected,
+  quantity,
   ...rest
 }: ToolButtonProps) {
   return (
     <button
       className={cn(
-        selected ? 'border-m bg-m/15' : 'border-white bg-white',
+        selected ? 'border-m bg-m/15' : 'border-sxl bg-white',
         'shadow-homeBox flex w-full cursor-pointer items-center gap-x-6 rounded-md border-[1px] px-3 py-[14px] outline-none',
       )}
       {...rest}
@@ -31,7 +33,7 @@ export default function ToolButton({
       <div className="flex w-50 flex-col items-start overflow-x-hidden">
         <p className="text-lg font-semibold">{toolType}</p>
         <p className="text-sd text-sm text-nowrap text-ellipsis">
-          {description}
+          {quantity ? `${quantity}` : description}
         </p>
       </div>
       <img src={selected ? CheckIcon : UnCheckedIcon} className="size-10" />
