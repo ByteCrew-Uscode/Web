@@ -20,9 +20,9 @@ export default function HomeContainer() {
       <div className="pb-dock-height flex w-full flex-col gap-y-5">
         <HomeButton
           icon={PhoneIcon}
-          label="말로 신청하기"
+          label="전화로 신청하기"
           description="전화가 연결되면, 그냥 평소처럼 이야기하듯 말해주세요.<br/>AI가 알아듣고 필요한 농기계 신청을 도와줍니다."
-          buttonLabel="말로 신청하기"
+          buttonLabel="전화로 신청하기"
           isAtag
           onClick={() => {
             push(PATH.PHONE_COMPLETE, {});
@@ -33,6 +33,9 @@ export default function HomeContainer() {
           label="사진으로 신청하기"
           description="피해 현장 사진을 찍어 올리면<br/>AI가 현장을 파악하고 지원을 도와줍니다."
           buttonLabel="사진 업로드"
+          onClick={() => {
+            push(PATH.PHOTO_UPLOAD, {});
+          }}
         />
         <HomeButton
           icon={EditIcon}
