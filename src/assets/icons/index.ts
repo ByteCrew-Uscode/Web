@@ -15,8 +15,11 @@ import HelpIcon from './icon-help.svg';
 import SearchIcon from './icon-search.svg';
 import CheckIcon from './icon-checked.svg';
 import UnCheckedIcon from './icon-unchecked.svg';
+import LogoutIcon from './icon-logout.svg';
+import CustomerIcon from './icon-customer.svg';
 
 export {
+  CustomerIcon,
   Logo,
   CameraIcon,
   TractorBlackIcon,
@@ -34,4 +37,5 @@ export {
   SearchIcon,
   CheckIcon,
   UnCheckedIcon,
+  LogoutIcon,
 };
