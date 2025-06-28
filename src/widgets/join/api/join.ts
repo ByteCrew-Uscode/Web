@@ -1,6 +1,7 @@
 import { useFlow } from '@/app/stackflow';
 import { post, REQUEST } from '@/shared/api';
 import { PATH } from '@/shared/constants';
+import { setSessionData } from '@/shared/utils';
 import { useMutation } from '@tanstack/react-query';
 import type { Dispatch, SetStateAction } from 'react';
 
@@ -19,7 +20,8 @@ export const useSubmitIdCard = (
 
   return useMutation({
     mutationFn: submitIdCard,
-    onSuccess: () => {
+    onSuccess: data => {
+      setSessionData('userInfo', data);
       replace(PATH.HOME, {});
     },
     onError: () => {
