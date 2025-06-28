@@ -3,4 +3,5 @@ export const PATH = {
   JOIN: 'JoinScreen',
   PHONE_COMPLETE: 'PhoneCompleteScreen',
   PHOTO_UPLOAD: 'PhotoUploadScreen',
+  FORM: 'FormScreen',
 } as const;
