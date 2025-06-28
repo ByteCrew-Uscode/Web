@@ -13,6 +13,8 @@ import ReservationSelectedIcon from './icon-reservation-selected.svg';
 import BellIcon from './icon-bell.svg';
 import HelpIcon from './icon-help.svg';
 import SearchIcon from './icon-search.svg';
+import CheckIcon from './icon-checked.svg';
+import UnCheckedIcon from './icon-unchecked.svg';
 
 export {
   Logo,
@@ -30,4 +32,6 @@ export {
   BellIcon,
   HelpIcon,
   SearchIcon,
+  CheckIcon,
+  UnCheckedIcon,
 };
