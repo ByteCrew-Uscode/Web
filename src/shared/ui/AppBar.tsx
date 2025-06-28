@@ -26,3 +26,5 @@ export const HomeAppBar = (
     </div>
   ),
 });
+
+export const NormalAppBar = (title: string) => ({ title: title, ...baseStyle });
