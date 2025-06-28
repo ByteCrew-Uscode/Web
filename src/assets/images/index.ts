@@ -1,3 +1,4 @@
-import BackgroundImage from "./background.png";
+import BackgroundImage from './background.png';
+import PhoneCompleteImage from './call-complete.png';
 
-export { BackgroundImage };
+export { BackgroundImage, PhoneCompleteImage };
