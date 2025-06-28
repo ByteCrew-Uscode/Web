@@ -12,6 +12,7 @@ import UserSelectedIcon from './icon-user-selected.svg';
 import ReservationSelectedIcon from './icon-reservation-selected.svg';
 import BellIcon from './icon-bell.svg';
 import HelpIcon from './icon-help.svg';
+import SearchIcon from './icon-search.svg';
 
 export {
   Logo,
@@ -28,4 +29,5 @@ export {
   ReservationSelectedIcon,
   BellIcon,
   HelpIcon,
+  SearchIcon,
 };
