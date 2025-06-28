@@ -23,7 +23,8 @@ export default function Dock(isLoading: DockProps) {
     .map(i => i.name)
     .pop() as PathItem;
 
-  const render = current !== PATH.PHONE_COMPLETE;
+  const render =
+    current !== PATH.PHONE_COMPLETE && current !== PATH.PHOTO_UPLOAD;
 
   return (
     <>
