@@ -2,7 +2,7 @@ import { CameraIcon, Logo } from '@/assets/icons';
 import { useImageUpload } from '@/shared/hooks';
 
 export default function JoinContainer() {
-  const { handleImageInputChange, image } = useImageUpload();
+  const { handleImageInputChange, image, isPending } = useImageUpload();
 
   return (
     <div className="p-normal grid h-screen w-full place-items-center">
@@ -34,6 +34,7 @@ export default function JoinContainer() {
             )}
           </div>
         </label>
+        {isPending && <div className="mt-4">사진 확인 완료! 가입중..</div>}
       </div>
     </div>
   );
