@@ -1,8 +1,8 @@
 import { CameraIcon, Logo } from '@/assets/icons';
-import { useIdImage } from '../model';
+import { useImageUpload } from '@/shared/hooks';
 
 export default function JoinContainer() {
-  const { handleImageInputChange, image } = useIdImage();
+  const { handleImageInputChange, image } = useImageUpload();
 
   return (
     <div className="p-normal grid h-screen w-full place-items-center">
