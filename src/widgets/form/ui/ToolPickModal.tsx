@@ -2,16 +2,26 @@ import { CloseIcon, SearchColoredIcon, SearchIcon } from '@/assets/icons';
 import { MODAL } from '@/shared/constants';
 import { useModal } from '@/shared/hooks';
 import { Button, Modal, ToolButton } from '@/shared/ui';
-import { useState } from 'react';
+import { useState, type Dispatch, type SetStateAction } from 'react';
 import { useFetchLocation, useFetchToolsByLocation } from '../api';
 import { cn } from '@/shared/utils';
 
-export default function ToolPickModal() {
+interface ToolPickModalProps {
+  selectedTool: string;
+  setSelectedTool: Dispatch<SetStateAction<string>>;
+  setSelectedLocationName: Dispatch<SetStateAction<string>>;
+  setSelectedPrice: Dispatch<SetStateAction<number>>;
+}
+
+export default function ToolPickModal({
+  selectedTool,
+  setSelectedTool,
+  setSelectedLocationName,
+  setSelectedPrice,
+}: ToolPickModalProps) {
   const { modalState, closeModal } = useModal();
   const { isOpen } = modalState(MODAL.TOOL_PICK);
-
   const [search, setSearch] = useState('');
-  const [selectedTool, setSelectedTool] = useState<string>('');
   const [selectedLocation, setSelectedLocation] = useState(1);
 
   const { data: location } = useFetchLocation();
@@ -26,7 +36,10 @@ export default function ToolPickModal() {
             selectedLocation === id && 'border-m bg-m text-white',
           )}
           key={id}
-          onClick={() => setSelectedLocation(id)}
+          onClick={() => {
+            setSelectedLocation(id);
+            setSelectedLocationName(locationName);
+          }}
         >
           {locationName}
         </button>
@@ -53,23 +66,27 @@ export default function ToolPickModal() {
         );
       }
 
-      return filteredTools.map(({ tool, quantity, description, image }) => (
-        <ToolButton
-          key={tool}
-          toolType={tool}
-          quantity={quantity}
-          description={description}
-          image={image}
-          selected={selectedTool === tool}
-          onClick={() => {
-            if (selectedTool === tool) {
-              setSelectedTool('');
-            } else {
-              setSelectedTool(tool);
-            }
-          }}
-        />
-      ));
+      return filteredTools.map(
+        ({ tool, quantity, description, image, price }) => (
+          <ToolButton
+            key={tool}
+            toolType={tool}
+            quantity={quantity}
+            description={description}
+            image={image}
+            selected={selectedTool === tool}
+            onClick={() => {
+              if (selectedTool === tool) {
+                setSelectedTool('');
+                setSelectedPrice(0);
+              } else {
+                setSelectedTool(tool);
+                setSelectedPrice(price);
+              }
+            }}
+          />
+        ),
+      );
     }
   };
 
@@ -105,9 +122,11 @@ export default function ToolPickModal() {
             {renderTools()}
           </div>
           <Button
+            type="button"
             size="lg"
             intent={selectedTool.length > 0 ? 'primary' : 'disabled'}
             disabled={selectedTool.length === 0}
+            onClick={() => closeModal(MODAL.TOOL_PICK)}
           >
             선택 완료
           </Button>

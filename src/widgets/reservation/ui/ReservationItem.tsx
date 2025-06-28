@@ -35,7 +35,9 @@ export default function ReservationItem({
     >
       <div className="mb-5 flex w-full items-center gap-6">
         <img
-          src={image || 'https://placehold.co/68x68'}
+          src={
+            'https://usfarmtools.com' + image || 'https://placehold.co/68x68'
+          }
           className="size-[68px] rounded-md object-cover object-center"
         />
         <div className="flex w-50 flex-col items-start overflow-x-hidden">
