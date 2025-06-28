@@ -1,3 +1,3 @@
 export const MODAL = {
-  TOOL_SEARCH: 'toolSearchModal',
+  TOOL_PICK: 'toolPickModal',
 } as const;
