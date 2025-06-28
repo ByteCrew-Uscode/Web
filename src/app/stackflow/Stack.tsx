@@ -2,6 +2,7 @@ import { CompleteScreen } from '@/screen/complete';
 import { FormScreen } from '@/screen/form/ui';
 import { HomeScreen } from '@/screen/home/ui';
 import { JoinScreen } from '@/screen/join/ui';
+import { PhotoLoadingScreen } from '@/screen/photo-loading/ui';
 import { PhotoUploadScreen } from '@/screen/photo-upload/ui';
 import { basicUIPlugin } from '@stackflow/plugin-basic-ui';
 import { basicRendererPlugin } from '@stackflow/plugin-renderer-basic';
@@ -15,6 +16,7 @@ export const { Stack, useFlow } = stackflow({
     PhotoUploadScreen,
     FormScreen,
     CompleteScreen,
+    PhotoLoadingScreen,
   },
   plugins: [
     basicRendererPlugin(),
