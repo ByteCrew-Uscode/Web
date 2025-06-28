@@ -17,8 +17,12 @@ import CheckIcon from './icon-checked.svg';
 import UnCheckedIcon from './icon-unchecked.svg';
 import LogoutIcon from './icon-logout.svg';
 import CustomerIcon from './icon-customer.svg';
+import CloseIcon from './icon-close.svg';
+import SearchColoredIcon from './icon-search-colored.svg';
 
 export {
+  CloseIcon,
+  SearchColoredIcon,
   CustomerIcon,
   Logo,
   CameraIcon,
