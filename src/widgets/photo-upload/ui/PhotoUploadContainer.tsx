@@ -31,7 +31,11 @@ export default function PhotoUploadContainer() {
         </div>
       </label>
       <div className="mt-15 flex w-full justify-center">
-        <Button intent={image ? 'primary' : 'disabled'} className="w-[310px]">
+        <Button
+          intent={image ? 'primary' : 'disabled'}
+          size="lg"
+          className="w-[310px]"
+        >
           AI가 추천해주는 농기계 보기
         </Button>
       </div>

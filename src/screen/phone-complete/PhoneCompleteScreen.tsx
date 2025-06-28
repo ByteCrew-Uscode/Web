@@ -18,7 +18,7 @@ export default function PhoneCompleteScreen() {
               AI가 계약서를 자동으로 작성하였으며 <br />
               <b>예약 현황</b>에서 언제든지 확인하실 수 있습니다
             </p>
-            <Button className="w-[310px]" onClick={() => pop()}>
+            <Button size="lg" className="w-[310px]" onClick={() => pop()}>
               홈으로 돌아가기
             </Button>
           </div>

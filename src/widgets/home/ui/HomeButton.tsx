@@ -19,7 +19,7 @@ export const HomeButton = ({
     <div className="shadow-homeBox py-normal w-full rounded-md bg-white px-[17px]">
       <p className="mb-2 text-xl font-bold">{label}</p>
       {description.split('<br/>').map((line, index) => (
-        <p className="text-s text-sm" key={index}>
+        <p className="text-s" key={index}>
           {line}
         </p>
       ))}

@@ -18,8 +18,8 @@ const ButtonVariants = cva(
         disabled: 'bg-[#D8D8D8] text-white',
       },
       size: {
-        md: 'w-full',
-        lg: 'w-full h-14 text-xl',
+        md: 'w-full py-3',
+        lg: 'w-full py-5 text-xl',
       },
     },
     defaultVariants: {

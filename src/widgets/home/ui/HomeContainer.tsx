@@ -21,7 +21,7 @@ export default function HomeContainer() {
         <HomeButton
           icon={PhoneIcon}
           label="전화로 신청하기"
-          description="전화가 연결되면, 그냥 평소처럼 이야기하듯 말해주세요.<br/>AI가 알아듣고 필요한 농기계 신청을 도와줍니다."
+          description="그냥 평소처럼 이야기하듯 말해주세요.<br/>AI가 알아듣고 필요한 농기계 신청을 도와줍니다."
           buttonLabel="전화로 신청하기"
           isAtag
           onClick={() => {
@@ -42,6 +42,9 @@ export default function HomeContainer() {
           label="직접 입력해서 신청하기"
           description="AI 추천이 아닌 내가 원하는 방식대로<br/>농기계 대여소 날짜를 직접 선택해 신청하세요."
           buttonLabel="직접 입력하기"
+          onClick={() => {
+            push(PATH.FORM, {});
+          }}
         />
       </div>
     </div>
