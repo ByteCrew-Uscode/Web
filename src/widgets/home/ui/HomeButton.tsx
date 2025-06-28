@@ -25,7 +25,7 @@ export const HomeButton = ({
       ))}
       {isAtag ? (
         <a
-          href="tel:13239911974"
+          href="tel:+13239911974"
           className="border-m text-m hover:bg-m-hover active:bg-m-hover mt-[26px] flex w-full cursor-pointer items-center justify-center rounded-full border-[1px] py-3 font-semibold focus:outline-none"
           onClick={onClick}
         >
