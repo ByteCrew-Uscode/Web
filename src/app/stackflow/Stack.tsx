@@ -1,6 +1,7 @@
+import { CompleteScreen } from '@/screen/complete';
+import { FormScreen } from '@/screen/form/ui';
 import { HomeScreen } from '@/screen/home/ui';
 import { JoinScreen } from '@/screen/join/ui';
-import { PhoneCompleteScreen } from '@/screen/phone-complete';
 import { PhotoUploadScreen } from '@/screen/photo-upload/ui';
 import { basicUIPlugin } from '@stackflow/plugin-basic-ui';
 import { basicRendererPlugin } from '@stackflow/plugin-renderer-basic';
@@ -11,8 +12,9 @@ export const { Stack, useFlow } = stackflow({
   activities: {
     JoinScreen,
     HomeScreen,
-    PhoneCompleteScreen,
     PhotoUploadScreen,
+    FormScreen,
+    CompleteScreen,
   },
   plugins: [
     basicRendererPlugin(),

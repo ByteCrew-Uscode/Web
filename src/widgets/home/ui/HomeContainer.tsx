@@ -25,7 +25,7 @@ export default function HomeContainer() {
           buttonLabel="전화로 신청하기"
           isAtag
           onClick={() => {
-            push(PATH.PHONE_COMPLETE, {});
+            push(PATH.COMPLETE, {});
           }}
         />
         <HomeButton

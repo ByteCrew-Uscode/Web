@@ -24,7 +24,7 @@ export default function Dock(isLoading: DockProps) {
     .pop() as PathItem;
 
   const render =
-    current !== PATH.PHONE_COMPLETE &&
+    current !== PATH.COMPLETE &&
     current !== PATH.PHOTO_UPLOAD &&
     current !== PATH.FORM;
 

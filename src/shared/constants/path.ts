@@ -1,7 +1,7 @@
 export const PATH = {
   HOME: 'HomeScreen',
   JOIN: 'JoinScreen',
-  PHONE_COMPLETE: 'PhoneCompleteScreen',
+  COMPLETE: 'CompleteScreen',
   PHOTO_UPLOAD: 'PhotoUploadScreen',
   FORM: 'FormScreen',
 } as const;
