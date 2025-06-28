@@ -27,4 +27,12 @@ export const HomeAppBar = (
   ),
 });
 
-export const NormalAppBar = (title: string) => ({ title: title, ...baseStyle });
+export const NormalAppBar = (title: string) => ({
+  renderLeft: () => {
+    if (title) {
+      return <span className="ml-1.5 text-xl font-semibold">{title}</span>;
+    }
+    return null;
+  },
+  ...baseStyle,
+});
