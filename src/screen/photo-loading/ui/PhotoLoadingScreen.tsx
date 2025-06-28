@@ -1,8 +1,22 @@
 import { LoadingBackground } from '@/assets/images';
 import { Loader } from '@/shared/ui';
+import { useSubmitPhoto } from '@/widgets/photo-upload/api';
 import { AppScreen } from '@stackflow/plugin-basic-ui';
+import type { ActivityComponentType } from '@stackflow/react';
+import { useEffect } from 'react';
 
-export default function PhotoUploadScreen() {
+const PhotoLoadingScreen: ActivityComponentType<{ data: FormData }> = ({
+  params,
+}: {
+  params: { data: FormData };
+}) => {
+  const { mutate: submitPhoto } = useSubmitPhoto();
+
+  useEffect(() => {
+    submitPhoto(params.data);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <AppScreen backgroundImage={`url(${LoadingBackground})`}>
       <div className="grid h-screen w-full place-items-center">
@@ -15,4 +29,6 @@ export default function PhotoUploadScreen() {
       </div>
     </AppScreen>
   );
-}
+};
+
+export default PhotoLoadingScreen;

@@ -1,9 +1,22 @@
 import { CameraIcon } from '@/assets/icons';
 import { useImageUpload } from '@/shared/hooks';
 import { Button } from '@/shared/ui';
+import { base64ToFile } from '@/shared/utils';
+import { useFlow } from '@/app/stackflow';
+import { PATH } from '@/shared/constants';
 
 export default function PhotoUploadContainer() {
   const { handleImageInputChange, image } = useImageUpload(true);
+  const { replace } = useFlow();
+
+  const handleSubmitPhoto = () => {
+    if (image) {
+      const file = base64ToFile(image);
+      const formData = new FormData();
+      formData.append('image', file);
+      replace(PATH.PHOTO_LOADING, { data: formData });
+    }
+  };
 
   return (
     <div className="p-normal size-full">
@@ -32,9 +45,11 @@ export default function PhotoUploadContainer() {
       </label>
       <div className="mt-15 flex w-full justify-center">
         <Button
+          disabled={!image}
           intent={image ? 'primary' : 'disabled'}
           size="lg"
           className="w-[310px]"
+          onClick={handleSubmitPhoto}
         >
           AI가 추천해주는 농기계 보기
         </Button>
