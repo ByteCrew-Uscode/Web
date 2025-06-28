@@ -1,7 +1,7 @@
 import { useState, type ChangeEvent } from 'react';
 import { useSubmitIdCard } from '@/widgets/join/api';
 
-export default function useIdImage() {
+export default function useImageUpload(isPhotoUpload?: boolean) {
   const [image, setImage] = useState<string | null>(null);
   const { mutate: submitIdCard } = useSubmitIdCard(setImage);
 
@@ -13,9 +13,11 @@ export default function useIdImage() {
         setImage(reader.result as string);
       };
       reader.readAsDataURL(file);
-      const formData = new FormData();
-      formData.append('image', file);
-      submitIdCard(formData);
+      if (!isPhotoUpload) {
+        const formData = new FormData();
+        formData.append('image', file);
+        submitIdCard(formData);
+      }
     } else {
       setImage('');
     }
