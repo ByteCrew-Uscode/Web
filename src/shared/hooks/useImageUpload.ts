@@ -3,7 +3,7 @@ import { useSubmitIdCard } from '@/widgets/join/api';
 
 export default function useImageUpload(isPhotoUpload?: boolean) {
   const [image, setImage] = useState<string | null>(null);
-  const { mutate: submitIdCard } = useSubmitIdCard(setImage);
+  const { mutate: submitIdCard, isPending } = useSubmitIdCard(setImage);
 
   const handleImageInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -22,5 +22,5 @@ export default function useImageUpload(isPhotoUpload?: boolean) {
       setImage('');
     }
   };
-  return { image, handleImageInputChange, setImage };
+  return { image, handleImageInputChange, setImage, isPending };
 }
