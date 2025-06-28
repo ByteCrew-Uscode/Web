@@ -1,3 +1,4 @@
+import { useFlow } from '@/app/stackflow';
 import { HomeButton } from './HomeButton';
 import {
   CameraSolidIcon,
@@ -5,8 +6,11 @@ import {
   PhoneIcon,
   TractorBlackIcon,
 } from '@/assets/icons';
+import { PATH } from '@/shared/constants';
 
 export default function HomeContainer() {
+  const { push } = useFlow();
+
   return (
     <div className="scrollbar-hide p-normal flex size-full flex-col overflow-scroll">
       <div className="mt-[134px] mb-2 flex items-center gap-x-1 text-3xl font-bold">
@@ -20,6 +24,9 @@ export default function HomeContainer() {
           description="전화가 연결되면, 그냥 평소처럼 이야기하듯 말해주세요.<br/>AI가 알아듣고 필요한 농기계 신청을 도와줍니다."
           buttonLabel="말로 신청하기"
           isAtag
+          onClick={() => {
+            push(PATH.PHONE_COMPLETE, {});
+          }}
         />
         <HomeButton
           icon={CameraSolidIcon}

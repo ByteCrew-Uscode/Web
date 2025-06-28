@@ -1,3 +1,5 @@
+import { Button } from '@/shared/ui';
+
 export const HomeButton = ({
   icon,
   label,
@@ -25,18 +27,16 @@ export const HomeButton = ({
         <a
           href="tel:13239911974"
           className="border-m text-m hover:bg-m-hover active:bg-m-hover mt-[26px] flex w-full cursor-pointer items-center justify-center rounded-full border-[1px] py-3 font-semibold focus:outline-none"
+          onClick={onClick}
         >
           <img src={icon} className="mr-2" />
           <span>{buttonLabel}</span>
         </a>
       ) : (
-        <button
-          onClick={onClick}
-          className="border-m text-m hover:bg-m-hover active:bg-m-hover mt-[26px] flex w-full cursor-pointer items-center justify-center rounded-full border-[1px] py-3 font-semibold focus:outline-none"
-        >
+        <Button onClick={onClick} className="mt-[26px]" intent="home">
           <img src={icon} className="mr-2" />
           <span>{buttonLabel}</span>
-        </button>
+        </Button>
       )}
     </div>
   );
