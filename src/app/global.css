@@ -1,0 +1,119 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable-dynamic-subset.css");
+@import "tailwindcss";
+
+@theme {
+  --color-m: #377ff8;
+  --color-md: #324160;
+  --color-ml: #6da2fe;
+  --color-mxl: #ecf5fe;
+
+  --color-s: #767676;
+  --color-sd: #333;
+  --color-sl: #dadada;
+  --color-sxl: #f5f5f5;
+
+  --color-res: #8b9aad;
+
+  --color-grad1: #5ba5f8;
+  --color-grad2: #7c81ff;
+
+  --text-4xl: 32px;
+  --text-3xl: 28px;
+  --text-2xl: 24px;
+  --text-xl: 20px;
+
+  --text-lg: 18px;
+  --text-mid: 16px;
+  --text-sm: 14px;
+
+  --spacing-normal: 20px;
+  --spacing-normal-half: 10px;
+  --spacing-mt: 24px;
+
+  --radius-lg: 20px;
+  --radius-md: 12px;
+}
+
+@font-face {
+  font-family: "Fredoka";
+  src: url("../assets/font/fredoka-variable.ttf") format("truetype");
+  font-weight: 600, 700;
+}
+
+:root {
+  font-family:
+    "Pretendard Variable",
+    "Pretendard",
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
+  font-size: 16px;
+  color: #111;
+  letter-spacing: -0.48px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@layer utilities {
+  .container-mobile {
+    max-width: 402px;
+    margin: 0 auto;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .overlay-visible {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .logo {
+    font-family: Fredoka;
+  }
+
+  .perspective {
+    perspective: 1000px;
+  }
+
+  .transform-style {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
