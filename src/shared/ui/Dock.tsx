@@ -23,10 +23,7 @@ export default function Dock(isLoading: DockProps) {
     .map(i => i.name)
     .pop() as PathItem;
 
-  const render =
-    current !== PATH.COMPLETE &&
-    current !== PATH.PHOTO_UPLOAD &&
-    current !== PATH.FORM;
+  const render = current === PATH.HOME;
 
   return (
     <>
