@@ -25,12 +25,12 @@ export default function ToolButton({
       {...rest}
     >
       <img
-        src={image || 'https://placehold.co/68x68'}
+        src={'https://usfarmtools.com' + image || 'https://placehold.co/68x68'}
         className="size-[68px] object-cover object-center"
       />
       <div className="flex w-50 flex-col items-start overflow-x-hidden">
         <p className="text-lg font-semibold">{toolType}</p>
-        <p className="text-sm text-nowrap text-ellipsis text-gray-500">
+        <p className="text-sd text-sm text-nowrap text-ellipsis">
           {description}
         </p>
       </div>
