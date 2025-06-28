@@ -21,6 +21,7 @@
     "clsx": "^2.1.1",
     "daisyui": "^5.0.43",
     "framer-motion": "^12.19.2",
+    "jotai": "^2.12.5",
     "prettier": "^3.6.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

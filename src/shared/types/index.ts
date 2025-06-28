@@ -3,3 +3,4 @@ export * from './path';
 export * from './reservation';
 export * from './user';
 export * from './tools';
+export * from './modal';
