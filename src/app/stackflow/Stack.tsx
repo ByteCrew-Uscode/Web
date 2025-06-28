@@ -1,5 +1,6 @@
 import { CompleteScreen } from '@/screen/complete';
 import { FormScreen } from '@/screen/form/ui';
+import { HelpScreen } from '@/screen/help/ui';
 import { HomeScreen } from '@/screen/home/ui';
 import { JoinScreen } from '@/screen/join/ui';
 import { PhotoLoadingScreen } from '@/screen/photo-loading/ui';
@@ -24,6 +25,7 @@ export const { Stack, useFlow } = stackflow({
     PhotoResultScreen,
     ReservationScreen,
     UserScreen,
+    HelpScreen,
   },
   plugins: [
     basicRendererPlugin(),

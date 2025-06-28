@@ -5,8 +5,12 @@ import Loader1 from './loader-1.png';
 import Loader2 from './loader-2.png';
 import Loader3 from './loader-3.png';
 import Loader4 from './loader-4.png';
+import InfoImage from './image-info.png';
+import InfoImage2 from './image-info2.png';
 
 export {
+  InfoImage,
+  InfoImage2,
   BackgroundImage,
   LoadingBackground,
   Loader1,

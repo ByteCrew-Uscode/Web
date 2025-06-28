@@ -8,4 +8,5 @@ export const PATH = {
   FORM: 'FormScreen',
   RESERVATION: 'ReservationScreen',
   USER: 'UserScreen',
+  HELP: 'HelpScreen',
 } as const;
