@@ -1,0 +1,25 @@
+{
+  "theme_color": "#f9f9f9",
+  "background_color": "#f9f9f9",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "/icons/icon.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "/icons/icon.png",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "any",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "ko-KR",
+  "name": "Took!",
+  "short_name": "Took!",
+  "start_url": "/"
+}
