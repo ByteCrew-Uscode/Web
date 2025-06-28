@@ -15,6 +15,7 @@ const ButtonVariants = cva(
       intent: {
         home: 'border-m text-m hover:bg-m-hover active:bg-m-hover border-[1px]',
         primary: 'bg-m text-white',
+        disabled: 'bg-[#D8D8D8] text-white',
       },
       size: {
         md: 'w-full',
